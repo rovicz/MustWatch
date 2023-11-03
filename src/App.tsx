@@ -1,10 +1,12 @@
 import React from "react";
-import GetMovie from "./Components/GetMovie";
+import { Outlet } from "react-router-dom";
+import Navbar from "./Components/Navbar";
 
 function App() {
   return (
-    <div>
-      <GetMovie />
+    <div className="App">
+      <Navbar />
+      <Outlet />
     </div>
   );
 }
