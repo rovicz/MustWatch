@@ -6,7 +6,7 @@ const Navbar = () => {
   const [searcher, setSearcher] = React.useState("");
 
   return (
-    <div>
+    <div className="container">
       <nav id="navbar">
         <h2>
           <Link to="/">MoviesSearch</Link>
