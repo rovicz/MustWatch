@@ -1,13 +1,13 @@
 import React from "react";
+import MovieCard from "../Components/MovieCard";
 
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
-const movieIMG = import.meta.env.VITE_IMG;
 
-type IMovies = {
+export type IMovies = {
   id: number;
   title: string;
-  vote_count: number;
+  vote_average: number;
   poster_path: string;
   overview: string;
 };
@@ -30,20 +30,15 @@ const Home = () => {
 
   if (!bestMovies) return null;
   return (
-    <div className="container">
+    <div className="container movies">
       <h2>Best Movies:</h2>
       <div className="movies-box">
         {bestMovies.length === 0 && <p>Loading...</p>}
         {bestMovies.length > 0 &&
           bestMovies.map((movie) => (
-            <ul key={movie.id}>
-              <li>
-                <img src={movieIMG + movie.poster_path} alt={movie.title} />
-              </li>
-              <li>
-                <p>Title: {movie.title}</p>
-              </li>
-            </ul>
+            <div key={movie.id}>
+              <MovieCard />
+            </div>
           ))}
       </div>
     </div>
