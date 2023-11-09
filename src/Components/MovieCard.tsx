@@ -1,14 +1,12 @@
 import { Link } from "react-router-dom";
 import { IMovies } from "../Pages/Home";
+import MovieInfo from "./MovieInfo";
 
-const movieIMG = import.meta.env.VITE_IMG;
-
-const MovieCard = (movie: IMovies) => {
+const MovieCard = (movie?: IMovies) => {
+  if (!movie) return null;
   return (
     <div className="movie-card">
-      <img src={movieIMG + movie.poster_path} alt={movie.title} />
-      <h2>Title: {movie.title}</h2>
-      <p>Vote: {movie.vote_average}</p>
+      <MovieInfo {...movie} />
       <Link to={`/movie/${movie.id}`}>Details</Link>
     </div>
   );

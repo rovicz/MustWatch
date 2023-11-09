@@ -9,8 +9,11 @@ html {
   --color-1: #000;
   --color-2: #f7d354;
   --color-3: #b8930c;
+  --color-4: #121212;
   --fontsize-1: 1.125rem;
   --fontsize-2: 1.5rem;
+  --gap-s: 0.625rem;
+  --gap: 1.25rem;
 }
 
 .container {
@@ -28,6 +31,7 @@ html {
 
 a {
   text-decoration: none;
+  color: var(--color-2);
 }
 
 body {
@@ -51,4 +55,36 @@ ul {
 .movies {
   flex-direction: column;
   align-items: center;
+}
+
+/* Navbar */
+
+.navbar-box {
+  background: var(--color-4);
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 10px 0;
+}
+
+#navbar h2 {
+  align-self: center;
+}
+
+.navbar-form {
+  display: flex;
+}
+
+.navbar-form label {
+  font-size: var(--fontsize-1);
+  margin: 0 var(--gap-s) 0 0;
+}
+
+#Searcher {
+  height: 30px;
 }

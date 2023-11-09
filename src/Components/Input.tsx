@@ -7,7 +7,7 @@ type InputProps = React.ComponentProps<"input"> & {
 
 const Input = ({ label, setState, ...props }: InputProps) => {
   return (
-    <div style={{ marginBottom: "1rem" }}>
+    <div>
       <label htmlFor={label}>{label}</label>
       <input
         id={label}

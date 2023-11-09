@@ -35,11 +35,7 @@ const Home = () => {
       <div className="movies-box">
         {bestMovies.length === 0 && <p>Loading...</p>}
         {bestMovies.length > 0 &&
-          bestMovies.map((movie) => (
-            <div key={movie.id}>
-              <MovieCard />
-            </div>
-          ))}
+          bestMovies.map((movie) => <MovieCard key={movie.id} {...movie} />)}
       </div>
     </div>
   );
