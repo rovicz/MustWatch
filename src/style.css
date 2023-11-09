@@ -17,6 +17,19 @@ html {
   --border-radius: 5px;
 }
 
+/* html {
+  --color-1: #010101;
+  --color-2: #c7282e;
+  --color-3: #fb624b;
+  --color-4: #0d0c0a;
+  --color-5: #ffffff;
+  --fontsize-1: 1.125rem;
+  --fontsize-2: 1.5rem;
+  --gap-s: 0.625rem;
+  --gap: 1.25rem;
+  --border-radius: 5px;
+} */
+
 .container {
   max-width: 1024px;
   margin: 0 auto;
@@ -88,11 +101,15 @@ ul {
   width: 40px;
   height: 40px;
   border-radius: var(--border-radius);
+  border: 2px solid var(--color-3);
+  margin: 0 0 0 5px;
 }
 
 .navbar-form input {
   height: 40px;
   border-radius: var(--border-radius);
+  border: 2px solid var(--color-3);
+  padding: 5px 10px;
 }
 
 /* Movies */
@@ -118,4 +135,22 @@ ul {
 .movie-card img {
   height: 360px;
   width: 260px;
+}
+
+.movie-card p {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-s);
+  margin-bottom: 10px;
+}
+
+.movie-card a {
+  background: var(--color-4);
+  border-radius: var(--border-radius);
+  padding: 5px;
+}
+
+.movie-card a:hover {
+  background: var(--color-3);
+  color: var(--color-1);
 }
