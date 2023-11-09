@@ -40,6 +40,7 @@ html {
   .container {
     flex-direction: column;
     max-width: 360px;
+    margin: 0 auto;
   }
 }
 
@@ -153,4 +154,10 @@ ul {
 .movie-card a:hover {
   background: var(--color-3);
   color: var(--color-1);
+}
+
+@media (max-width: 739px) {
+  .movies-box {
+    justify-content: center;
+  }
 }
