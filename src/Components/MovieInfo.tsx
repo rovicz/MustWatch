@@ -7,7 +7,7 @@ const MovieInfo = (movie?: IMovies) => {
   return (
     <div>
       <img src={movieIMG + movie.poster_path} alt={movie.title} />
-      <h2>Title: {movie.title}</h2>
+      <h2>{movie.title}</h2>
       <p>Vote: {movie.vote_average}</p>
     </div>
   );

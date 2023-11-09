@@ -31,7 +31,6 @@ const Home = () => {
   if (!bestMovies) return null;
   return (
     <div className="container movies">
-      <h2>Best Movies:</h2>
       <div className="movies-box">
         {bestMovies.length === 0 && <p>Loading...</p>}
         {bestMovies.length > 0 &&

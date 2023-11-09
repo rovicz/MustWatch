@@ -14,10 +14,11 @@ html {
   --fontsize-2: 1.5rem;
   --gap-s: 0.625rem;
   --gap: 1.25rem;
+  --border-radius: 5px;
 }
 
 .container {
-  max-width: 960px;
+  max-width: 1024px;
   margin: 0 auto;
   display: flex;
 }
@@ -52,11 +53,6 @@ ul {
   list-style-type: none;
 }
 
-.movies {
-  flex-direction: column;
-  align-items: center;
-}
-
 /* Navbar */
 
 .navbar-box {
@@ -72,8 +68,10 @@ ul {
   padding: 10px 0;
 }
 
-#navbar h2 {
-  align-self: center;
+#navbar h2 a {
+  display: flex;
+  align-items: center;
+  gap: var(--gap-s);
 }
 
 .navbar-form {
@@ -85,6 +83,39 @@ ul {
   margin: 0 var(--gap-s) 0 0;
 }
 
-#Searcher {
-  height: 30px;
+.navbar-box button {
+  background: var(--color-2);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--border-radius);
+}
+
+.navbar-form input {
+  height: 40px;
+  border-radius: var(--border-radius);
+}
+
+/* Movies */
+
+.movies {
+  align-items: center;
+}
+
+.movie-card {
+  width: 300px;
+  display: inline-block;
+  flex-direction: row;
+  padding: 15px 0;
+}
+
+.movies-box {
+  margin: 0 auto;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-between;
+}
+
+.movie-card img {
+  height: 360px;
+  width: 260px;
 }
