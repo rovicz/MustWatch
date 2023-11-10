@@ -27,6 +27,11 @@ const Search = () => {
   if (!searchedMovies) return null;
   return (
     <div className="container movies">
+      <div className="title t-search">
+        <h2>
+          You searched for: <span>{query}</span>
+        </h2>
+      </div>
       <div className="movies-box">
         {searchedMovies.length === 0 && <p>Loading...</p>}
         {searchedMovies.length > 0 &&
