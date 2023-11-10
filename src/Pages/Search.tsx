@@ -3,7 +3,6 @@ import { useSearchParams } from "react-router-dom";
 import MovieCard from "../Components/MovieCard";
 import { IMovies } from "./Home";
 
-const moviesURL = import.meta.env.VITE_API;
 const searchURL = import.meta.env.VITE_SEARCH;
 const apiKey = import.meta.env.VITE_API_KEY;
 
@@ -29,9 +28,6 @@ const Search = () => {
   if (!searchedMovies) return null;
   return (
     <div className="container movies">
-      <h2>
-        Results for: <span>{query}</span>
-      </h2>
       <div className="movies-box">
         {searchedMovies.length === 0 && <p>Loading...</p>}
         {searchedMovies.length > 0 &&
