@@ -7,7 +7,6 @@ const searchURL = import.meta.env.VITE_SEARCH;
 const apiKey = import.meta.env.VITE_API_KEY;
 
 const Search = () => {
-  const [bestMovies, setBestMovies] = React.useState<IMovies[] | null>([]);
   const [searchedMovies, setSearchedMovies] = React.useState<IMovies[] | null>(
     []
   );
