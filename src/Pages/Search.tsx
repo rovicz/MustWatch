@@ -1,7 +1,46 @@
 import React from "react";
+import { useSearchParams } from "react-router-dom";
+import MovieCard from "../Components/MovieCard";
+import { IMovies } from "./Home";
+
+const moviesURL = import.meta.env.VITE_API;
+const searchURL = import.meta.env.VITE_SEARCH;
+const apiKey = import.meta.env.VITE_API_KEY;
 
 const Search = () => {
-  return <div>Search</div>;
+  const [bestMovies, setBestMovies] = React.useState<IMovies[] | null>([]);
+  const [searchedMovies, setSearchedMovies] = React.useState<IMovies[] | null>(
+    []
+  );
+  const [searchParams] = useSearchParams();
+  const query = searchParams.get("q");
+
+  const getSearchedMovies = async (url: string) => {
+    const res = await fetch(url);
+    const data = await res.json();
+    setSearchedMovies(data.results);
+  };
+
+  React.useEffect(() => {
+    const searchWithQueryURL = `${searchURL}?${apiKey}&query=${query}`;
+    getSearchedMovies(searchWithQueryURL);
+  }, [query]);
+
+  if (!searchedMovies) return null;
+  return (
+    <div className="container movies">
+      <h2>
+        Results for: <span>{query}</span>
+      </h2>
+      <div className="movies-box">
+        {searchedMovies.length === 0 && <p>Loading...</p>}
+        {searchedMovies.length > 0 &&
+          searchedMovies.map((movie) => (
+            <MovieCard key={movie.id} {...movie} />
+          ))}
+      </div>
+    </div>
+  );
 };
 
 export default Search;

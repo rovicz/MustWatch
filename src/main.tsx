@@ -19,7 +19,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
             element={
               <Movie
                 id={0}
-                title={""}
+                title={"Teste"}
                 vote_average={0}
                 poster_path={""}
                 overview={""}
