@@ -25,7 +25,6 @@ const Home = () => {
   React.useEffect(() => {
     const bestMoviesURL = `${moviesURL}top_rated?${apiKey}`;
     getBestMovies(bestMoviesURL);
-    console.log(getBestMovies(bestMoviesURL));
   }, []);
 
   if (!bestMovies) return null;
@@ -36,7 +35,7 @@ const Home = () => {
         <p>The best 20 rated movies on the internet.</p>
       </div>
       <div className="movies-box">
-        {bestMovies.length === 0 && <p>Loading...</p>}
+        {bestMovies.length === 0 && <p className="loading">Loading...</p>}
         {bestMovies.length > 0 &&
           bestMovies.map((movie) => <MovieCard key={movie.id} {...movie} />)}
       </div>
