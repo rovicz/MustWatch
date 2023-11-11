@@ -164,6 +164,13 @@ ul {
   justify-content: space-between;
 }
 
+.loading {
+  font-size: var(--fontsize-2);
+  color: #fff;
+  font-weight: 600;
+  text-align: center;
+}
+
 .movie-card img {
   height: 360px;
   width: 260px;

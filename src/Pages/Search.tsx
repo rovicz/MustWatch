@@ -33,7 +33,7 @@ const Search = () => {
         </h2>
       </div>
       <div className="movies-box">
-        {searchedMovies.length === 0 && <p>Loading...</p>}
+        {searchedMovies.length === 0 && <p className="loading">Loading...</p>}
         {searchedMovies.length > 0 &&
           searchedMovies.map((movie) => (
             <MovieCard key={movie.id} {...movie} />
