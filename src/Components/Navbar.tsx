@@ -8,7 +8,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (
-    e: React.FormEvent<HTMLFormElement>
+    e: React.FormEvent<HTMLFormElement>,
   ) => {
     e.preventDefault();
 
@@ -23,7 +23,7 @@ const Navbar = () => {
       <nav id="navbar">
         <h2>
           <Link to="/">
-            <BiCameraMovie /> MoviesSearch
+            <BiCameraMovie /> MustWatch
           </Link>
         </h2>
         <form onSubmit={handleSubmit} className="navbar-form">

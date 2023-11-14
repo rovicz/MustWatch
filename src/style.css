@@ -6,10 +6,10 @@
 }
 
 html {
-  --color-1: #000;
-  --color-2: #f7d354;
-  --color-3: #b8930c;
-  --color-4: #121212;
+  --color-1: #081c15;
+  --color-2: #b7e4c7;
+  --color-3: #52b788;
+  --color-4: #1b4332;
   --fontsize-1: 1.25rem;
   --fontsize-2: 1.5rem;
   --fontsize-3: 2.5rem;
@@ -17,19 +17,6 @@ html {
   --gap: 1.25rem;
   --border-radius: 5px;
 }
-
-/* html {
-  --color-1: #010101;
-  --color-2: #c7282e;
-  --color-3: #fb624b;
-  --color-4: #0d0c0a;
-  --color-5: #ffffff;
-  --fontsize-1: 1.125rem;
-  --fontsize-2: 1.5rem;
-  --gap-s: 0.625rem;
-  --gap: 1.25rem;
-  --border-radius: 5px;
-} */
 
 .container {
   max-width: 1024px;
@@ -107,6 +94,21 @@ ul {
   max-width: 1024px;
   margin: 0 auto;
   padding: 10px 0;
+}
+
+@media (max-width: 600px) {
+  #navbar {
+    flex-direction: column;
+    margin: 10px 0;
+  }
+
+  #navbar h2 a {
+    margin-bottom: 10px;
+  }
+
+  .navbar-form label {
+    display: none;
+  }
 }
 
 #navbar h2 a {
