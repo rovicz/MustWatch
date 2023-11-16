@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import React from "react";
 import { FaStar } from "react-icons/fa";
-import { GiPriceTag } from "react-icons/gi";
+import { GiPayMoney, GiReceiveMoney } from "react-icons/gi";
 
 type MovieInfos = {
   title: string;
@@ -10,6 +10,8 @@ type MovieInfos = {
   vote_average: number;
   poster_path: string;
   budget: number;
+  revenue: number;
+  runtime: number;
 };
 
 const movieIMG = import.meta.env.VITE_IMG;
@@ -32,6 +34,12 @@ const Movie = () => {
     getMovie(movieURL);
   }, [id]);
 
+  function timeCoverter(num: number) {
+    const hours = Math.floor(num / 60);
+    const minutes = num % 60;
+    return `${hours}h:${minutes}min`;
+  }
+
   if (!movie) return null;
   return (
     <div className="container movie-desc">
@@ -41,12 +49,20 @@ const Movie = () => {
           <img src={movieIMG + movie.poster_path} alt={movie.title} />
           <p className="tagline">{movie.tagline}</p>
           <p className="budget">
-            <GiPriceTag /> Budget:{" "}
+            <GiPayMoney /> Budget:{" "}
             {movie.budget.toLocaleString("us", {
               style: "currency",
               currency: "USD",
             })}
           </p>
+          <p className="revenue">
+            <GiReceiveMoney /> Revenue:{" "}
+            {movie.revenue.toLocaleString("us", {
+              style: "currency",
+              currency: "USD",
+            })}
+          </p>
+          <p className="runtime">Runtime: {timeCoverter(movie.runtime)}</p>
           <p className="vote-average">
             <FaStar /> {movie.vote_average}
           </p>
