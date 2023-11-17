@@ -165,12 +165,21 @@ ul {
 }
 
 .navbar-box button {
+  box-shadow: inset 0 0 0 0 #fff;
   background: var(--color-2);
   width: 40px;
   height: 40px;
   border-radius: var(--border-radius);
   border: 2px solid var(--color-3);
   margin: 0 0 0 5px;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.navbar-box button:hover {
+  box-shadow: inset 100px 0 0 0 var(--color-3);
+  color: var(--color-2);
+  border: 2px solid var(--color-3);
+  border-radius: var(--border-radius);
 }
 
 .navbar-form input {
@@ -227,14 +236,19 @@ ul {
 }
 
 .movie-card a {
+  box-shadow: inset 0 0 0 0 #fff;
   background: var(--color-1);
+  border: 2px solid var(--color-3);
   border-radius: var(--border-radius);
   padding: 10px 20px;
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .movie-card a:hover {
-  background: var(--color-2);
   color: var(--color-3);
+  box-shadow: inset 95px 0 0 0 var(--color-2);
+  border: 2px solid var(--color-3);
+  border-radius: var(--border-radius);
 }
 
 @media (max-width: 739px) {
