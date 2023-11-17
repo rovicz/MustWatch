@@ -2,6 +2,7 @@ import { useParams } from "react-router-dom";
 import React from "react";
 import { FaStar } from "react-icons/fa";
 import { GiPayMoney, GiReceiveMoney } from "react-icons/gi";
+import { RiTimeFill } from "react-icons/ri";
 
 type MovieInfos = {
   title: string;
@@ -37,7 +38,7 @@ const Movie = () => {
   function timeCoverter(num: number) {
     const hours = Math.floor(num / 60);
     const minutes = num % 60;
-    return `${hours}h:${minutes}min`;
+    return `${hours}h:${minutes}m`;
   }
 
   if (!movie) return null;
@@ -62,7 +63,9 @@ const Movie = () => {
               currency: "USD",
             })}
           </p>
-          <p className="runtime">Runtime: {timeCoverter(movie.runtime)}</p>
+          <p className="runtime">
+            <RiTimeFill /> {timeCoverter(movie.runtime)}
+          </p>
           <p className="vote-average">
             <FaStar /> {movie.vote_average}
           </p>
