@@ -11,7 +11,8 @@ const MovieInfo = (movie?: IMovies) => {
       <img src={movieIMG + movie.poster_path} alt={movie.title} />
       <h2>{movie.title}</h2>
       <p>
-        <FaStar /> {movie.vote_average}
+        <FaStar />
+        {movie.vote_average.toFixed(2)}
       </p>
       <Link to={`/movie/${movie.id}`}>Details</Link>
     </div>

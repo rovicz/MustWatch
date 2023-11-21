@@ -1,5 +1,5 @@
 * {
-  font-family: monospace;
+  font-family: "Lato", monospace, sans-serif;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -10,6 +10,7 @@ html {
   --color-2: #f8f9fa;
   --color-3: #343a40;
   --color-4: #495057;
+  --fontsize-0-5: 1rem;
   --fontsize-1: 1.25rem;
   --fontsize-2: 1.5rem;
   --fontsize-3: 2.5rem;
@@ -96,7 +97,7 @@ ul {
 }
 
 .title h2 {
-  font-size: var(--fontsize-3);
+  font-size: var(--fontsize-2);
   font-weight: bold;
 }
 
@@ -257,6 +258,7 @@ ul {
 .movieinfo-box h2 {
   text-align: center;
   margin: 10px 0 5px 0;
+  font-size: var(--fontsize-1);
 }
 
 /* Movie */
@@ -298,7 +300,8 @@ ul {
 
 .tagline {
   margin: 10px 0;
-  font-size: var(--fontsize-1);
+  font-size: var(--fontsize-0-5);
+  font-style: italic;
 }
 
 .vote-average,
@@ -310,7 +313,7 @@ ul {
 .budget,
 .revenue {
   font-size: var(--fontsize-1);
-  margin: 5px 0 10px 0;
+  margin: 5px 0 5px 0;
 }
 
 .overview-title {

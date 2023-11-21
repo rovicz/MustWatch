@@ -67,7 +67,7 @@ const Movie = () => {
             <RiTimeFill /> {timeCoverter(movie.runtime)}
           </p>
           <p className="vote-average">
-            <FaStar /> {movie.vote_average}
+            <FaStar /> {movie.vote_average.toFixed(2)}
           </p>
 
           <p className="overview-title">Overview:</p>
