@@ -31,7 +31,7 @@ const Home = () => {
   return (
     <div className="container movies">
       <div className="title">
-        <h2>Best Movies:</h2>
+        <h2>Best Movies</h2>
         <p>The best 20 rated movies on the internet.</p>
       </div>
       <div className="movies-box">

@@ -2,6 +2,7 @@ import React from "react";
 import { Link, useNavigate } from "react-router-dom";
 import Input from "./Input";
 import { BiCameraMovie, BiSearchAlt2 } from "react-icons/bi";
+import logo from "../assets/logo.svg";
 
 const Navbar = () => {
   const [searcher, setSearcher] = React.useState("");
@@ -23,7 +24,7 @@ const Navbar = () => {
       <nav id="navbar">
         <h2>
           <Link to="/">
-            <BiCameraMovie /> MustWatch
+            <img src={logo} /> MustWatch
           </Link>
         </h2>
         <form onSubmit={handleSubmit} className="navbar-form">
