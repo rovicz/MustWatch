@@ -3,13 +3,14 @@ import { Link, useNavigate } from "react-router-dom";
 import Input from "./Input";
 import { BiCameraMovie, BiSearchAlt2 } from "react-icons/bi";
 import logo from "../assets/logo.svg";
+import { FaSearch } from "react-icons/fa";
 
 const Navbar = () => {
   const [searcher, setSearcher] = React.useState("");
   const navigate = useNavigate();
 
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (
-    e: React.FormEvent<HTMLFormElement>,
+    e: React.FormEvent<HTMLFormElement>
   ) => {
     e.preventDefault();
 
@@ -28,7 +29,12 @@ const Navbar = () => {
           </Link>
         </h2>
         <form onSubmit={handleSubmit} className="navbar-form">
-          <Input label="Searcher" setState={setSearcher} value={searcher} />
+          <Input
+            icon={<FaSearch />}
+            label="Searcher"
+            setState={setSearcher}
+            value={searcher}
+          />
           <button type="submit">
             <BiSearchAlt2 />
           </button>{" "}

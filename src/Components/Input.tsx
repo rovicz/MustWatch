@@ -1,14 +1,15 @@
-import React from "react";
+import React, { ReactNode } from "react";
 
 type InputProps = React.ComponentProps<"input"> & {
   label: string;
+  icon: ReactNode;
   setState: React.Dispatch<React.SetStateAction<string>>;
 };
 
-const Input = ({ label, setState, ...props }: InputProps) => {
+const Input = ({ label, setState, icon, ...props }: InputProps) => {
   return (
     <div>
-      <label htmlFor={label}>{label}</label>
+      <label htmlFor={label}>{icon}</label>
       <input
         id={label}
         onChange={({ currentTarget }) => setState(currentTarget.value)}
