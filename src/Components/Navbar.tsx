@@ -25,7 +25,8 @@ const Navbar = () => {
       <nav id="navbar">
         <h2>
           <Link to="/">
-            <img src={logo} /> MustWatch
+            <img src={logo} />
+            MustWatch
           </Link>
         </h2>
         <form onSubmit={handleSubmit} className="navbar-form">
