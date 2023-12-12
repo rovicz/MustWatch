@@ -376,6 +376,26 @@ ul {
 }
 
 @media (max-width: 739px) {
+  .movie-info {
+    flex-direction: column;
+    padding: 15px;
+    align-items: center;
+    margin: 30px 0;
+  }
+
+  .movie-desc {
+    align-items: center;
+    margin: 0;
+  }
+
+  .overview {
+    text-align: center;
+  }
+
+  .imdb-button a {
+    margin: 0 auto;
+  }
+
   .movie-info img {
     max-width: 300px;
   }
