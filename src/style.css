@@ -388,8 +388,18 @@ ul {
     margin: 0;
   }
 
+  .movie-title {
+    text-align: center;
+    font-size: var(--fontsize-2);
+    margin-top: 10px;
+  }
+
   .movie-title::after {
-    margin: 0 auto;
+    margin: 5px auto 0 auto;
+  }
+
+  .tagline {
+    margin-bottom: 10px;
   }
 
   .overview {
