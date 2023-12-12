@@ -169,10 +169,13 @@ ul {
   display: flex;
 }
 
+.navbar-form > div {
+  display: flex;
+  align-items: center;
+}
+
 .navbar-form label {
-  font-size: var(--fontsize-0-5);
-  margin-right: 3px;
-  font-weight: bold;
+  margin: 3px;
 }
 
 .navbar-box button {
