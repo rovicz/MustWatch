@@ -388,6 +388,10 @@ ul {
     margin: 0;
   }
 
+  .movie-title::after {
+    margin: 0 auto;
+  }
+
   .overview {
     text-align: center;
   }
