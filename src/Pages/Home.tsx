@@ -17,9 +17,14 @@ const Home = () => {
 
   const getBestMovies = async (url: string) => {
     const r = await fetch(url);
-    const data = await r.json();
-
-    setBestMovies(data.results);
+    if (r.ok) {
+      const data = await r.json();
+      setBestMovies(data.results);
+    } else if (r.status === 404) {
+      return Promise.reject("Error 404.");
+    } else {
+      return Promise.reject("other error:" + r.status);
+    }
   };
 
   React.useEffect(() => {
