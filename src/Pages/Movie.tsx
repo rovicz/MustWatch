@@ -4,6 +4,7 @@ import { FaStar } from "react-icons/fa";
 import { GiPayMoney, GiReceiveMoney } from "react-icons/gi";
 import imdb_logo from "../assets/imdb-logo.svg";
 import { RiTimeFill } from "react-icons/ri";
+import { MdOutlineDateRange } from "react-icons/md";
 
 type MovieInfos = {
   title: string;
@@ -15,6 +16,7 @@ type MovieInfos = {
   revenue: number;
   runtime: number;
   imdb_id: string;
+  release_date: string;
 };
 
 const movieIMG = import.meta.env.VITE_IMG;
@@ -44,7 +46,23 @@ const Movie = () => {
     return `${hours}h:${minutes}m`;
   }
 
+  function getMovieReleaseDate(date: string) {
+    const actualDate = new Date();
+    const actualYear = actualDate.getFullYear();
+    const convertDate = new Date(date);
+    const yearDate = convertDate.getFullYear();
+
+    if (!yearDate) {
+      return "To be announced.";
+    } else if (yearDate > actualYear) {
+      return `${yearDate}: Not yet released.`;
+    }
+
+    return yearDate;
+  }
+
   if (!movie) return null;
+
   return (
     <div className="container">
       <div>
@@ -72,6 +90,10 @@ const Movie = () => {
             </p>
             <p className="vote-average">
               <FaStar /> {movie.vote_average.toFixed(2)}
+            </p>
+
+            <p className="release-date">
+              <MdOutlineDateRange /> {getMovieReleaseDate(movie.release_date)}
             </p>
 
             <p className="overview-title">Overview:</p>

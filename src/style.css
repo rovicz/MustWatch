@@ -221,6 +221,10 @@ ul {
   align-items: center;
 }
 
+div.movie-card {
+  animation: dropDown 1s;
+}
+
 .movies-box {
   margin: 0 auto;
   flex-wrap: wrap;
@@ -334,7 +338,8 @@ ul {
 }
 
 .vote-average,
-.runtime {
+.runtime,
+.release-date {
   font-size: var(--fontsize-1);
   margin-bottom: 10px;
 }
