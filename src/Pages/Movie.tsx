@@ -43,6 +43,11 @@ const Movie = () => {
   function timeCoverter(num: number) {
     const hours = Math.floor(num / 60);
     const minutes = num % 60;
+
+    if (hours == 0 && minutes == 0) {
+      return "Not informed.";
+    }
+
     return `${hours}h:${minutes}m`;
   }
 
@@ -73,17 +78,21 @@ const Movie = () => {
             <p className="tagline">{movie.tagline}</p>
             <p className="budget">
               <GiPayMoney /> Budget:{" "}
-              {movie.budget.toLocaleString("us", {
-                style: "currency",
-                currency: "USD",
-              })}
+              {movie.budget > 0
+                ? movie.budget.toLocaleString("us", {
+                    style: "currency",
+                    currency: "USD",
+                  })
+                : "Not Informed."}
             </p>
             <p className="revenue">
               <GiReceiveMoney /> Revenue:{" "}
-              {movie.revenue.toLocaleString("us", {
-                style: "currency",
-                currency: "USD",
-              })}
+              {movie.revenue > 0
+                ? movie.revenue.toLocaleString("us", {
+                    style: "currency",
+                    currency: "USD",
+                  })
+                : "Not Informed."}
             </p>
             <p className="runtime">
               <RiTimeFill /> {timeCoverter(movie.runtime)}
