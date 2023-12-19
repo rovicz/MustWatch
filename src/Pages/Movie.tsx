@@ -1,10 +1,11 @@
-import { useParams } from "react-router-dom";
 import React from "react";
+import { useParams } from "react-router-dom";
 import { FaStar } from "react-icons/fa";
 import { GiPayMoney, GiReceiveMoney } from "react-icons/gi";
 import imdb_logo from "../assets/imdb-logo.svg";
 import { RiTimeFill } from "react-icons/ri";
 import { MdOutlineDateRange } from "react-icons/md";
+import NoMoviePoster from "../assets/NoMoviePoster.jpg";
 
 type MovieInfos = {
   title: string;
@@ -67,12 +68,16 @@ const Movie = () => {
   }
 
   if (!movie) return null;
-
+  const imgFinal = movieIMG + movie.poster_path;
   return (
     <div className="container">
       <div>
         <div className=" movie-info">
-          <img src={movieIMG + movie.poster_path} alt={movie.title} />
+          {imgFinal.includes("null") ? (
+            <img src={NoMoviePoster} alt="No Movie Poster." />
+          ) : (
+            <img src={imgFinal} alt={movie.title} />
+          )}
           <div className="movie-desc">
             <h2 className="movie-title">{movie.title}</h2>
             <p className="tagline">{movie.tagline}</p>
@@ -98,7 +103,10 @@ const Movie = () => {
               <RiTimeFill /> {timeCoverter(movie.runtime)}
             </p>
             <p className="vote-average">
-              <FaStar /> {movie.vote_average.toFixed(2)}
+              <FaStar />{" "}
+              {movie.vote_average > 0
+                ? movie.vote_average.toFixed(2)
+                : "Not informed."}
             </p>
 
             <p className="release-date">
