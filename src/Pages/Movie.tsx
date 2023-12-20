@@ -49,7 +49,7 @@ const Movie = () => {
       return "Not informed.";
     }
 
-    return `${hours}h:${minutes}m`;
+    return `${hours}h${minutes}m`;
   }
 
   function getMovieReleaseDate(date: string) {
@@ -100,7 +100,8 @@ const Movie = () => {
                 : "Not Informed."}
             </p>
             <p className="runtime">
-              <RiTimeFill /> {timeCoverter(movie.runtime)}
+              <RiTimeFill />
+              {timeCoverter(movie.runtime)}
             </p>
             <p className="vote-average">
               <FaStar />{" "}

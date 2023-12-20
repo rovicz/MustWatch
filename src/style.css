@@ -175,7 +175,7 @@ ul {
 }
 
 .navbar-form label {
-  margin: 3px;
+  margin: 10px;
 }
 
 .navbar-box button {
@@ -199,6 +199,7 @@ ul {
 
 .navbar-form input {
   height: 40px;
+  width: 220px;
   border-radius: var(--border-radius);
   border: 2px solid var(--color-3);
   padding: 5px 10px;
