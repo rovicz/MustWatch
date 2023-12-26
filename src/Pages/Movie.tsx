@@ -73,7 +73,7 @@ const Movie = () => {
   return (
     <div className="container">
       <div>
-        <div className=" movie-info">
+        <div className="movie-info">
           {imgFinal.includes("null") ? (
             <img src={NoMoviePoster} alt="No Movie Poster." />
           ) : (
