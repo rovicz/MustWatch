@@ -332,22 +332,18 @@ div.movie-card {
 }
 
 .tagline {
-  margin: 5px 0 30px 0;
+  margin: 5px 0 15px 0;
   font-size: var(--fontsize-0-5);
   font-style: italic;
 }
 
 .vote-average,
 .runtime,
-.release-date {
-  font-size: var(--fontsize-1);
-  margin-bottom: 10px;
-}
-
+.release-date,
 .budget,
 .revenue {
   font-size: var(--fontsize-1);
-  margin: 5px 0 5px 0;
+  margin-bottom: 10px;
 }
 
 .overview-title {

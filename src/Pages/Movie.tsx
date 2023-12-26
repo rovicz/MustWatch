@@ -13,6 +13,7 @@ type MovieInfos = {
   tagline: string;
   vote_average: number;
   poster_path: string;
+  backdrop_path: string;
   budget: number;
   revenue: number;
   runtime: number;
@@ -80,7 +81,13 @@ const Movie = () => {
           )}
           <div className="movie-desc">
             <h2 className="movie-title">{movie.title}</h2>
-            <p className="tagline">{movie.tagline}</p>
+            {movie.tagline !== "" ? (
+              <p className="tagline">{movie.tagline}</p>
+            ) : (
+              <p className="tagline">
+                This movie doesn't have an informed tagline.
+              </p>
+            )}
             <p className="budget">
               <GiPayMoney /> Budget:{" "}
               {movie.budget > 0
