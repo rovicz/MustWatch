@@ -102,7 +102,7 @@ ul {
   margin: 0 auto;
   text-align: center;
   margin: 20px 5px;
-  animation: dropDown 0.5s;
+  animation: dropDown 1s;
 }
 
 .title h2 {
@@ -223,7 +223,7 @@ ul {
 }
 
 div.movie-card {
-  animation: dropDown 1s;
+  animation: dropDown 0.5s;
 }
 
 .movies-box {
@@ -231,7 +231,7 @@ div.movie-card {
   flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
-  animation: dropDown 1s;
+  animation: dropDown 0.5s;
 }
 
 .loading p {
@@ -310,6 +310,7 @@ div.movie-card {
 .movie-title {
   font-size: var(--fontsize-3);
   margin-bottom: 5px;
+  animation: dropSlide 1s;
 }
 
 .movie-title::after {
@@ -323,6 +324,7 @@ div.movie-card {
 
 .movie-info img {
   border-radius: var(--border-radius);
+  animation: dropSlide 1s;
 }
 
 .movie-info p {
@@ -335,6 +337,7 @@ div.movie-card {
   margin: 5px 0 15px 0;
   font-size: var(--fontsize-0-5);
   font-style: italic;
+  animation: dropSlide 1s;
 }
 
 .vote-average,
@@ -344,6 +347,7 @@ div.movie-card {
 .revenue {
   font-size: var(--fontsize-1);
   margin-bottom: 10px;
+  animation: dropSlide 1s;
 }
 
 .overview-title {
@@ -359,6 +363,11 @@ div.movie-card {
   border-radius: var(--border-radius);
 }
 
+.overview-title,
+.overview {
+  animation: dropSlide 1s;
+}
+
 .movie-desc {
   display: flex;
   flex-direction: column;
@@ -369,6 +378,7 @@ div.movie-card {
   display: flex;
   margin-top: 20px;
   flex-direction: column;
+  animation: dropSlide 1s;
 }
 
 .imdb-button p {
@@ -445,6 +455,17 @@ div.movie-card {
   from {
     opacity: 0;
     transform: translate3d(0, -30px, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes dropSlide {
+  from {
+    opacity: 0;
+    transform: translate3d(-30px, 0, 0);
   }
   to {
     opacity: 1;
