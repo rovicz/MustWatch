@@ -205,6 +205,10 @@ ul {
   padding: 5px 10px;
 }
 
+div.navbar-box {
+  box-shadow: rgba(0, 0, 0, 0.35) 0px -50px 36px -28px inset;
+}
+
 /* Movies */
 
 .movies {
@@ -231,7 +235,7 @@ div.movie-card {
   flex-wrap: wrap;
   display: flex;
   justify-content: space-between;
-  animation: dropDown 0.5s;
+  animation: dropDown 0.2s;
 }
 
 .loading p {
@@ -305,6 +309,8 @@ div.movie-card {
   max-width: 1024px;
   margin: 30px auto 0 auto;
   display: flex;
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .movie-title {
@@ -324,7 +330,7 @@ div.movie-card {
 
 .movie-info img {
   border-radius: var(--border-radius);
-  animation: dropSlide 1s;
+  animation: dropSlide 0.3s;
 }
 
 .movie-info p {
