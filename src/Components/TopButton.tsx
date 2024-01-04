@@ -2,7 +2,9 @@ import { MdOutlineKeyboardDoubleArrowUp } from "react-icons/md";
 import initScrollTop from "./TopButtonFunction";
 
 const TopButton = () => {
-  initScrollTop();
+  window.onload = function () {
+    initScrollTop();
+  };
   return (
     <div>
       <a id="topButton">
