@@ -415,6 +415,7 @@ div.movie-card {
 
   .movie-title::after {
     margin: 5px auto 0 auto;
+    animation: dropDown 1s;
   }
 
   .tagline {
@@ -431,6 +432,20 @@ div.movie-card {
 
   .movie-info img {
     max-width: 300px;
+  }
+
+  .vote-average,
+  .movie-info img,
+  .movie-title,
+  .runtime,
+  .release-date,
+  .budget,
+  .revenue,
+  .tagline,
+  .overview,
+  .overview-title,
+  .imdb-button {
+    animation: dropDown 1s;
   }
 }
 
