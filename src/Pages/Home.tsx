@@ -36,8 +36,8 @@ const Home = () => {
   return (
     <div className="container movies">
       <div className="title">
-        <h2>Best Movies</h2>
-        <p>The best 20 rated movies on the internet.</p>
+        <h2>The Twenty</h2>
+        <p>The 20 highest rated films on the internet you must watch.</p>
       </div>
       <div className="movies-box">
         {bestMovies.length === 0 && <p className="loading">Loading...</p>}
