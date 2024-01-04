@@ -17,6 +17,7 @@ html {
   --gap-s: 0.625rem;
   --gap: 1.25rem;
   --border-radius: 10px;
+  scroll-behavior: smooth;
 }
 
 ::selection {
@@ -470,6 +471,39 @@ div.movie-card {
   .tagline {
     margin: 5px 0 5px 0;
   }
+}
+
+/* TopButton */
+
+#topButton {
+  position: fixed;
+  display: none;
+  z-index: 100;
+  cursor: pointer;
+  right: 20px;
+  bottom: 40px;
+  width: 60px;
+  height: 60px;
+  background: var(--color-3);
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  outline: none;
+}
+
+#topButton svg {
+  display: flex;
+  align-items: center;
+  margin: 15px auto;
+  height: 25px;
+  width: 25px;
+}
+
+#topButton:active {
+  background: var(--color-4);
+}
+
+#topButton:hover {
+  color: var(--color-2);
 }
 
 /* Animation */
