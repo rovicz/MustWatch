@@ -4,14 +4,6 @@ import MovieCard from "../Components/MovieCard";
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
 
-export type IMovies = {
-  id: number;
-  title: string;
-  vote_average: number;
-  poster_path: string;
-  overview: string;
-};
-
 const Home = () => {
   const [bestMovies, setBestMovies] = React.useState<IMovies[] | null>([]);
 

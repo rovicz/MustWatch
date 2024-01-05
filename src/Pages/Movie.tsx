@@ -7,20 +7,6 @@ import { RiTimeFill } from "react-icons/ri";
 import { MdOutlineDateRange } from "react-icons/md";
 import NoMoviePoster from "../assets/NoMoviePoster.jpg";
 
-type MovieInfos = {
-  title: string;
-  overview: string;
-  tagline: string;
-  vote_average: number;
-  poster_path: string;
-  backdrop_path: string;
-  budget: number;
-  revenue: number;
-  runtime: number;
-  imdb_id: string;
-  release_date: string;
-};
-
 const movieIMG = import.meta.env.VITE_IMG;
 const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;

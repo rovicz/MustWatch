@@ -1,4 +1,3 @@
-import { IMovies } from "../Pages/Home";
 import { FaStar } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import NoMoviePoster from "../assets/NoMoviePoster.jpg";

@@ -1,4 +1,3 @@
-import { IMovies } from "../Pages/Home";
 import MovieInfo from "./MovieInfo";
 
 const MovieCard = (movie?: IMovies) => {

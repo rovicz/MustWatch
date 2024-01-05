@@ -1,14 +1,12 @@
 import React from "react";
 import { useSearchParams } from "react-router-dom";
 import MovieCard from "../Components/MovieCard";
-import { IMovies } from "./Home";
-
 const searchURL = import.meta.env.VITE_SEARCH;
 const apiKey = import.meta.env.VITE_API_KEY;
 
 const Search = () => {
   const [searchedMovies, setSearchedMovies] = React.useState<IMovies[] | null>(
-    []
+    [],
   );
   const [searchParams] = useSearchParams();
   const query = searchParams.get("q");
