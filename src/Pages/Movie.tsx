@@ -74,6 +74,7 @@ const Movie = () => {
                 This movie doesn't have an informed tagline.
               </p>
             )}
+
             <p className="budget">
               <GiPayMoney /> Budget:{" "}
               {movie.budget > 0
@@ -83,6 +84,7 @@ const Movie = () => {
                   })
                 : "Not Informed."}
             </p>
+
             <p className="revenue">
               <GiReceiveMoney /> Revenue:{" "}
               {movie.revenue > 0
@@ -92,10 +94,16 @@ const Movie = () => {
                   })
                 : "Not Informed."}
             </p>
+
             <p className="runtime">
               <RiTimeFill />
               {timeCoverter(movie.runtime)}
             </p>
+
+            <p className="release-date">
+              <MdOutlineDateRange /> {getMovieReleaseDate(movie.release_date)}
+            </p>
+
             <p className="vote-average">
               <FaStar />{" "}
               {movie.vote_average > 0
@@ -103,11 +111,8 @@ const Movie = () => {
                 : "Not informed."}
             </p>
 
-            <p className="release-date">
-              <MdOutlineDateRange /> {getMovieReleaseDate(movie.release_date)}
-            </p>
-
             <p className="overview-title">Overview:</p>
+
             <p className="overview"> {movie.overview}</p>
 
             <div className="imdb-button">
